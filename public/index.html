@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cloud To-Do App</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="Enter task..." />
+    <button id="addTaskBtn">Add</button>
+    <ul id="taskList"></ul>
+  </div>
+
+  <!-- Firebase SDK and Config -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+    const firebaseConfig = {
+  apiKey: "AIzaSyB5MdWUrmlKVAaLJs5l_Mo0Eq37C5Wlvyk",
+  authDomain: "todo-app-6dcbe.firebaseapp.com",
+  projectId: "todo-app-6dcbe",
+  storageBucket: "todo-app-6dcbe.firebasestorage.app",
+  messagingSenderId: "719629262415",
+  appId: "1:719629262415:web:2d1d149d2f829af175143a"
+};
+
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    window.db = db; // make it available globally
+  </script>
+
+  <!-- Your main app logic -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
