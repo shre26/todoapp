@@ -38,6 +38,11 @@ A simple, clean, and real-time **To-Do List Web Application** built using **Fire
 
 ---
 
+## Firebase Live App Link
+https://todo-app-6dcbe.web.app
+
+---
+
 ## 🚀 Deployment
 
 The app is deployed using Firebase CLI:
